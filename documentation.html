@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documentation - Protocol Minecraft Mod</title>
+    <link rel="stylesheet" href="styles.css">
+    <meta name="description" content="Complete installation and usage guide for the Protocol Minecraft mod.">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html">
+                    <span class="logo-icon">◆</span>
+                    <span class="logo-text">Protocol</span>
+                </a>
+            </div>
+            <button class="nav-toggle" id="navToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <div class="nav-menu" id="navMenu">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="features.html" class="nav-link">Features</a>
+                <a href="gallery.html" class="nav-link">Gallery</a>
+                <a href="documentation.html" class="nav-link active">Docs</a>
+                <a href="community.html" class="nav-link">Community</a>
+                <a href="account.html" class="nav-link btn-account">Account</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <h1>Documentation</h1>
+        <p>Complete guide to installing and using the Protocol Minecraft mod</p>
+    </section>
+
+    <!-- Main Content -->
+    <section class="content-grid">
+        <div class="card">
+            <h2>System Requirements</h2>
+            <h3>Minimum Requirements:</h3>
+            <ul>
+                <li><strong>OS:</strong> Windows 10 (64-bit), macOS 10.14+, or Linux</li>
+                <li><strong>Java:</strong> Java 8 or higher (Java 11+ recommended)</li>
+                <li><strong>RAM:</strong> 4GB minimum</li>
+                <li><strong>Storage:</strong> 5GB free disk space</li>
+                <li><strong>GPU:</strong> Intel HD Graphics or equivalent</li>
+            </ul>
+            <h3>Recommended Requirements:</h3>
+            <ul>
+                <li><strong>OS:</strong> Windows 10/11 (64-bit), macOS 11+, or Linux (latest kernel)</li>
+                <li><strong>Java:</strong> Java 11 or Java 17</li>
+                <li><strong>RAM:</strong> 8GB or more</li>
+                <li><strong>Storage:</strong> 15GB SSD</li>
+                <li><strong>GPU:</strong> NVIDIA GTX 1060 or AMD RX 580 or better</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h2>Installation Guide</h2>
+            <h3>Step 1: Install Java</h3>
+            <p>First, ensure you have Java installed on your system. Download from <strong>java.com</strong> or use your package manager.</p>
+            
+            <h3>Step 2: Choose Your Mod Loader</h3>
+            <p>Protocol supports multiple mod loaders. Choose one based on your preference:</p>
+            <ul>
+                <li><strong>Forge:</strong> Most compatible, largest mod ecosystem</li>
+                <li><strong>Fabric:</strong> Lighter weight, faster loading times</li>
+                <li><strong>Quilt:</strong> Modern alternative to Fabric</li>
+            </ul>
+
+            <h3>Step 3: Download Protocol</h3>
+            <p>Download the latest version from the Downloads page. Select the correct version for your Minecraft version.</p>
+
+            <h3>Step 4: Install the Mod</h3>
+            <p>Place the downloaded Protocol JAR file into your mods folder:</p>
+            <div class="code-block">
+# Windows
+%APPDATA%\.minecraft\mods
+
+# macOS
+~/Library/Application Support/minecraft/mods
+
+# Linux
+~/.minecraft/mods
+            </div>
+
+            <h3>Step 5: Launch Minecraft</h3>
+            <p>Open the Minecraft launcher and select the appropriate Profile (Forge/Fabric/Quilt). Click Play and wait for the game to start.</p>
+
+            <h3>Step 6: Verify Installation</h3>
+            <p>Once in-game, press the Protocol key (default: Ctrl+P) to open the main menu. If you see the Protocol panel, the installation was successful!</p>
+        </div>
+
+        <div class="card">
+            <h2>Getting Started</h2>
+            <h3>First Launch</h3>
+            <p>On your first launch, Protocol will create a configuration file and initialize the mod. This process takes about 30 seconds.</p>
+
+            <h3>Main Menu</h3>
+            <p>Press <strong>Ctrl+P</strong> (or your custom keybinding) to open the Protocol main menu. Here you can access:</p>
+            <ul>
+                <li><strong>Settings:</strong> Configure all mod options</li>
+                <li><strong>Quests:</strong> Track your quest progress</li>
+                <li><strong>Inventory:</strong> Enhanced inventory management</li>
+                <li><strong>Multiplayer:</strong> Connect to servers</li>
+                <li><strong>About:</strong> Information and help</li>
+            </ul>
+
+            <h3>Basic Commands</h3>
+            <p>Protocol includes several useful commands. Use them in the chat:</p>
+            <div class="code-block">
+/protocol help         - Show all available commands
+/protocol config       - Open configuration menu
+/protocol quest [id]   - Start or check a quest
+/protocol teleport     - Fast travel to locations
+/protocol stats        - View your statistics
+            </div>
+
+            <h3>Keybindings</h3>
+            <p>Customize keybindings in Settings > Controls. Default keybindings:</p>
+            <ul>
+                <li><strong>Ctrl+P:</strong> Open Protocol menu</li>
+                <li><strong>Shift+Q:</strong> Open Quest log</li>
+                <li><strong>Shift+I:</strong> Open enhanced inventory</li>
+                <li><strong>Shift+M:</strong> Open map</li>
+                <li><strong>Shift+K:</strong> Open skill tree</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h2>Configuration</h2>
+            <h3>Config File Location</h3>
+            <div class="code-block">
+# Windows
+%APPDATA%\.minecraft\config\protocol\settings.json
+
+# macOS
+~/Library/Application Support/minecraft/config/protocol/settings.json
+
+# Linux
+~/.minecraft/config/protocol/settings.json
+            </div>
+
+            <h3>Common Configuration Options</h3>
+            <div class="code-block">
+{
+  "protocol": {
+    "enabled": true,
+    "language": "en",
+    "theme": "dark",
+    "performance": {
+      "max_fps": 144,
+      "render_distance": 16,
+      "particle_level": "high"
+    },
+    "gameplay": {
+      "difficulty_scaling": true,
+      "quest_notifications": true,
+      "auto_save_interval": 300
+    },
+    "ui": {
+      "scale": 1.0,
+      "transparency": 0.8,
+      "show_coordinates": true
+    }
+  }
+}
+            </div>
+
+            <h3>Resetting Configuration</h3>
+            <p>To reset Protocol to default settings, delete the config folder and restart Minecraft. The configuration will be regenerated automatically.</p>
+        </div>
+
+        <div class="card">
+            <h2>Troubleshooting</h2>
+            <h3>Protocol won't load</h3>
+            <ul>
+                <li>Check Java version: <code>java -version</code></li>
+                <li>Verify mod file is in correct mods folder</li>
+                <li>Delete config folder and restart</li>
+                <li>Check logs: <code>.minecraft/logs/latest.log</code></li>
+            </ul>
+
+            <h3>Game crashes on startup</h3>
+            <ul>
+                <li>Increase allocated RAM in launcher</li>
+                <li>Check for mod conflicts</li>
+                <li>Update to latest Java version</li>
+                <li>Report crash with log file to support</li>
+            </ul>
+
+            <h3>Low performance / FPS drops</h3>
+            <ul>
+                <li>Lower render distance in settings</li>
+                <li>Reduce particle level</li>
+                <li>Disable visual enhancements if needed</li>
+                <li>Check if GPU drivers are up to date</li>
+                <li>Allocate more RAM to Minecraft</li>
+            </ul>
+
+            <h3>Features not working</h3>
+            <ul>
+                <li>Check if mod is properly installed</li>
+                <li>Verify keybindings in Settings</li>
+                <li>Update to latest Protocol version</li>
+                <li>Check mod compatibility with other mods</li>
+            </ul>
+
+            <h3>Multiplayer issues</h3>
+            <ul>
+                <li>Protocol must be installed on server</li>
+                <li>Use compatible server version</li>
+                <li>Check firewall settings</li>
+                <li>Verify network connection</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h2>Updating Protocol</h2>
+            <h3>Automatic Updates</h3>
+            <p>Protocol can notify you of new updates. Enable automatic checks in Settings > Updates.</p>
+
+            <h3>Manual Update</h3>
+            <p>To manually update:</p>
+            <ol>
+                <li>Download the new version from Downloads page</li>
+                <li>Delete or backup the old Protocol JAR file</li>
+                <li>Place the new JAR file in your mods folder</li>
+                <li>Restart Minecraft</li>
+            </ol>
+
+            <h3>Update Notes</h3>
+            <p>Always check the changelog before updating to understand what has changed. Major version updates may require config reset.</p>
+        </div>
+
+        <div class="card">
+            <h2>Advanced Usage</h2>
+            <h3>Custom Mods Integration</h3>
+            <p>Protocol can work with other mods. For best compatibility, use mods from the recommended list in our Discord server.</p>
+
+            <h3>Server Setup</h3>
+            <p>To run Protocol on a server:</p>
+            <div class="code-block">
+# Download server jar
+java -Xmx4G -jar protocol-server.jar nogui
+
+# Configure server.properties
+server-port=25565
+online-mode=true
+            </div>
+
+            <h3>Plugin Development</h3>
+            <p>Developers can create plugins for Protocol. See our API documentation on GitHub for details.</p>
+
+            <h3>Custom Textures</h3>
+            <p>Create custom texture packs compatible with Protocol. Place texture packs in:</p>
+            <div class="code-block">
+.minecraft/resourcepacks/
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>FAQ</h2>
+            <h3>Is Protocol free?</h3>
+            <p>Yes, Protocol is completely free to download and use.</p>
+
+            <h3>Is Protocol safe?</h3>
+            <p>Yes, Protocol is regularly audited for security vulnerabilities and is safe to use.</p>
+
+            <h3>Can I use Protocol on multiplayer servers?</h3>
+            <p>Yes, as long as the server has Protocol installed or supports the mod.</p>
+
+            <h3>Will Protocol work with my other mods?</h3>
+            <p>Most mods are compatible with Protocol. Check our compatibility list for known conflicts.</p>
+
+            <h3>How often is Protocol updated?</h3>
+            <p>Protocol receives major updates monthly and hotfixes as needed.</p>
+
+            <h3>Does Protocol work with all Minecraft versions?</h3>
+            <p>Protocol supports Minecraft 1.12+. Check the Downloads page for specific version availability.</p>
+
+            <h3>Where can I report bugs?</h3>
+            <p>Report bugs on our GitHub repository or Discord server with detailed information and logs.</p>
+
+            <h3>How do I uninstall Protocol?</h3>
+            <p>Simply delete the Protocol JAR file from your mods folder and restart Minecraft.</p>
+        </div>
+
+        <div class="card">
+            <h2>Support & Resources</h2>
+            <h3>Getting Help</h3>
+            <ul>
+                <li><strong>Discord:</strong> Join our community for real-time support</li>
+                <li><strong>GitHub Issues:</strong> Report bugs and request features</li>
+                <li><strong>Wiki:</strong> Comprehensive documentation</li>
+                <li><strong>Forums:</strong> Community discussions and solutions</li>
+            </ul>
+
+            <h3>Useful Links</h3>
+            <ul>
+                <li><a href="https://github.com" target="_blank">Protocol GitHub Repository</a></li>
+                <li><a href="https://minecraft.net" target="_blank">Minecraft Official Website</a></li>
+                <li><a href="https://minecraftforge.net" target="_blank">Minecraft Forge</a></li>
+                <li><a href="https://fabricmc.net" target="_blank">Fabric Loader</a></li>
+            </ul>
+
+            <h3>Community</h3>
+            <p>Join our thriving community on Discord to connect with other players, share creations, and get help from experienced members.</p>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <h2>Ready to start your Protocol journey?</h2>
+        <p>Download now and follow this guide to get started in minutes</p>
+        <div class="cta-buttons">
+            <a href="download.html" class="btn btn-primary">Download Now</a>
+            <a href="community.html" class="btn btn-secondary">Join Community</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Protocol</h4>
+                <p>The ultimate Minecraft modification experience</p>
+                <div class="social-links">
+                    <a href="community.html#discord" class="social-link">Discord</a>
+                    <a href="community.html#twitter" class="social-link">Twitter</a>
+                    <a href="community.html#github" class="social-link">GitHub</a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="features.html">Features</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="documentation.html">Documentation</a></li>
+                    <li><a href="download.html">Downloads</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Support</h4>
+                <ul>
+                    <li><a href="community.html">Community</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Bug Report</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Legal</h4>
+                <ul>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                    <li><a href="#">License</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Protocol. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>
